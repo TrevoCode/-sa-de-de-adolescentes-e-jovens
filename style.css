@@ -18,11 +18,35 @@ body {
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
+.imgPV {
+    border-radius: 30px;
+    box-shadow: 4px 4px 15px black;
+    transition: transform 0.3s ease;
+}
+.imgPV:hover{
+    transform: scale(1.03);
+
+}
 .cor_vemelha img{
     border: 4px solid #fe0902;
 }
-.cor_verde img{
+.cor_verde .Banner{
     border: 4px solid #5d9e4e;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.cor_verde .Banner:hover{
+    transform: scale(1.03);
+}
+.cor_verde .i{
+    border: 4px solid #5d9e4e;
+    height: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin: 30px;
+}
+.cor_verde .i:hover{
+    transform: scale(1.03);
 }
 
 
@@ -73,7 +97,7 @@ body {
     height: 60px;
     border-radius: 19px;
     transform: scale(1.03);
-    box-shadow: 4px 4px 15px black;
+
 }
 
 .cor_vemelha .menu img{
@@ -110,7 +134,7 @@ body {
     color: white;
     border-color: #1964b8;
     transform: translateY(-3px);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    
 }
 .cor_vemelha .menu a:hover{
     background-color:#df0702;
@@ -146,17 +170,40 @@ h1 {
     padding: 10px 15px;
     text-align: center;
     color: #0f407b;
+    margin: 30PX;
+    transition: transform 0.3s ease;
 
-   
-  
 }
 
-.menu h1{
+h1:hover{
+    transform: scale(1.03); 
+}
+
+.menu .int {
     display: flex; 
     align-items: center; 
     white-space: nowrap; 
     font-size: 12px;
     height: 20;
+    transition: transform 0.3s ease;
+
+}
+.menu .int:hover{
+    transform: scale(1.02); 
+
+}
+.img {
+
+    align-items: center; 
+    height: 300;
+    transition: transform 0.3s ease;
+    border: #1964b8 solid 4px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px black;
+    
+}
+.img:hover{
+    transform: scale(1.02); 
 
 }
 
@@ -167,11 +214,21 @@ h2, h3 {
     border-radius: 10px;
     width: auto;
     padding: 10px 15px;
+    margin: 30PX;
     text-align: center;
     color: #0f407b;
+    transition: transform 0.3s ease;
    
     display: block; 
     font-size: 20px; 
+}
+h2:hover {
+    transform: scale(1.03); 
+  
+}
+
+h3:hover{
+    transform: scale(1.03); 
 }
 
 .cor_vemelha h1, .cor_vemelha h2, .cor_vemelha h3{
@@ -212,4 +269,83 @@ ul {
     text-align: left;
     
     padding-left: 30px;
+}
+
+iframe{
+
+    border: #820000 solid 4px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px black;
+    transition: transform 0.3s ease; 
+
+}
+
+iframe:hover{
+     transform: scale(1.03); 
+}
+
+.rodape__conteudo {
+    background: linear-gradient(#5d9e4e, #2c7e20);
+    color: #fff;
+    padding: 28px 16px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-top: 3px solid #215c1a;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+    
+}
+
+
+.cor_azul .rodape__conteudo {
+    background: linear-gradient(#74b3f9, #1964b8);
+    border-top: 3px solid #0f407b;
+}
+.cor_vemelha .rodape__conteudo {
+    background: linear-gradient(#fb4126,#820000);
+    border-top: 3px solid #820000;
+}
+.rodape__conteudo{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.rodape__linha{
+  margin: 0 0 8px;
+  letter-spacing: .3px;
+}
+
+.rodape__nomes{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.rodape__instituicao{
+  margin: 10px 0 0;
+  opacity: .95;
+}
+
+
+@media (min-width: 640px){
+  .rodape__nomes{
+    display: inline-flex;
+    gap: 10px;
+  }
+  .rodape__nomes li{
+    position: relative;
+    padding: 0 10px;
+  }
+  .rodape__nomes li + li::before{
+    content: "•";
+    position: absolute;
+    left: -2px;
+    opacity: .6;
+  }
 }
